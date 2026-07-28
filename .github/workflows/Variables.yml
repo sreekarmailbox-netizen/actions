@@ -1,14 +1,14 @@
-name: test-env
-on: push
-env:
-  APP_ENV: "dev"
+name: test-inputs
+on: 
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Select Environment"
+        required: true
+        default: dev
 jobs:
-  test-env:
-    env:
-      APP_ENV: "test"
+  test-input:
     runs-on: ubuntu-latest
     steps:
-      - name: connecting to env
-        env:
-          APP_ENV: "prod"
-        run: echo "app connecting to $APP_ENV"
+      - name: deploy the application
+        run: echo " deploying app into ${{ inputs.environment}}"
