@@ -1,7 +1,7 @@
 name: test-env
 on: push
 env:
-  APP ENV: "dev"
+  APP_ENV: "dev"
 jobs:
   test-env:
     env:
@@ -9,4 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: connecting to env
+        env:
+          APP_ENV: "prod"
         run: echo "app connecting to $APP_ENV"
