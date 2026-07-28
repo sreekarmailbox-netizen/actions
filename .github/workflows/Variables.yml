@@ -6,6 +6,11 @@ on:
         description: "Select Environment"
         required: true
         default: dev
+        type: choice
+        options:
+          - dev
+          - test
+          - uat
 jobs:
   test-input:
     runs-on: ubuntu-latest
