@@ -1,0 +1,12 @@
+name: test-env
+on: push
+env:
+  APP ENV: "dev"
+jobs:
+  test-env:
+    env:
+      APP_ENV: "test"
+    runs-on: ubuntu-latest
+    steps:
+      - name: connecting to env
+        run: echo "app connecting to $APP_ENV"
