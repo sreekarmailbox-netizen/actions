@@ -3,4 +3,4 @@ on:
   push
 jobs:
   build:
-    uses: sreekarmailbox-netizen/actions/reusable/.github/workflows/reusable.yml@main
+    uses: sreekarmailbox-netizen/reusable/.github/workflows/reusable.yml@main
