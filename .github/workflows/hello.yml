@@ -1,0 +1,6 @@
+name: Ecommerce Pipeline
+on:
+  push
+jobs:
+  build:
+    uses: sreekarmailbox-netizen/actions/practice.github/workflows/reusable.yml@main
